@@ -1,6 +1,6 @@
 baseurl = "https://dmoncada.netlify.com/"
 title = "Data Science blog"
-copyright = "&copy; 2017 Dayana Moncada"
+copyright = "&copy; 2017 Dayana Moncada Morales"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"

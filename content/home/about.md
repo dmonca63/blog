@@ -12,9 +12,9 @@ weight = 5
 [interests]
   interests = [
     "Data Science",
-    "Fashion Merchandising, Analysis, ECommerce",
+    "Fashion Merchandising Analysis, ECommerce",
     "Programming",
-    "Political Science and International Relations/Latin American Politics"
+    "Latin American Politics"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -37,6 +37,5 @@ weight = 5
 
 # Biography
 
-Dayana Moncada is a MS in Data Science candidate at Mercyhurst University. Her research interests include political data analysis, international relations and diplomacy, programming in R Studio and Python. As well, as fashion analysis and ecommerce and she has a passion for Latin American politics and development.  
-
+Dayana Moncada Morales is a MS in Data Science candidate at Mercyhurst University. Her research interests include political data analysis, international relations and diplomacy, programming in R Studio and Python. She is passionate about understanding Latin American political systems, culture and history. 
 
