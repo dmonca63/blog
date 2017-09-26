@@ -1,5 +1,5 @@
 baseurl = "https://dmoncada.netlify.com/"
-title = "Data Science blog"
+title = "Data Science Blog"
 copyright = "&copy; 2017 Dayana Moncada Morales"
 theme = "hugo-academic"
 enableEmoji = true
@@ -23,7 +23,7 @@ defaultContentLanguageInSubdir = false
   organization_url = ""
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "Professionalpic.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "test@example.org"
+  email = "dmoncadamorales@gmail.com"
   address = "Erie, Pennsylvania"
 
   # Enable Keybase in Contact section by entering your keybase.io username.
