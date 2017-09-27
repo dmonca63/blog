@@ -33,13 +33,13 @@
 
   
 
-  <link rel="alternate" href="https://dmoncada.netlify.com/index.xml" type="application/rss+xml" title="Data Science Blog">
-  <link rel="feed" href="https://dmoncada.netlify.com/index.xml" type="application/rss+xml" title="Data Science Blog">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Data Science Blog">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Data Science Blog">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://dmoncada.netlify.com/">
+  <link rel="canonical" href="/">
 
   
 
@@ -132,8 +132,8 @@
     <div id="profile">
 
       
-      <div class="portrait" style="background-image: url('https://dmoncada.netlify.com/img/Professionalpic.jpg');"></div>
-      <meta itemprop="image" content="https://dmoncada.netlify.com/img/Professionalpic.jpg">
+      <div class="portrait" style="background-image: url('/img/Professionalpic.jpg');"></div>
+      <meta itemprop="image" content="/img/Professionalpic.jpg">
       
 
       <div class="portrait-title">
@@ -148,7 +148,7 @@
         
       </div>
 
-      <link itemprop="url" href="https://dmoncada.netlify.com/">
+      <link itemprop="url" href="/">
 
       <ul class="social-icon" aria-hidden="true">
         
@@ -232,6 +232,158 @@
       
 
     </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="2015-07-23-r-rmarkdown" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>The Lahman Base</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p>Let’s use the Lahman database. First let’s download some packages:</p>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div id="code" class="section level2">
+<h2>Code</h2>
+<p>Now let’s run some codes:</p>
+<pre class="r"><code>Batting%&gt;%
+  select(playerID,teamID,yearID,HR)%&gt;%
+  filter(HR&gt;50)</code></pre>
+<pre><code>##     playerID teamID yearID HR
+## 1   ruthba01    NYA   1920 54
+## 2   ruthba01    NYA   1921 59
+## 3   ruthba01    NYA   1927 60
+## 4   ruthba01    NYA   1928 54
+## 5  wilsoha01    CHN   1930 56
+## 6   foxxji01    PHA   1932 58
+## 7  greenha01    DET   1938 58
+## 8  kinerra01    PIT   1947 51
+## 9   mizejo01    NY1   1947 51
+## 10 kinerra01    PIT   1949 54
+## 11  mayswi01    NY1   1955 51
+## 12 mantlmi01    NYA   1956 52
+## 13 mantlmi01    NYA   1961 54
+## 14 marisro01    NYA   1961 61
+## 15  mayswi01    SFN   1965 52
+## 16 fostege01    CIN   1977 52
+## 17 fieldce01    DET   1990 51
+## 18 mcgwima01    OAK   1996 52
+## 19 griffke02    SEA   1997 56
+## 20 griffke02    SEA   1998 56
+## 21 mcgwima01    SLN   1998 70
+## 22  sosasa01    CHN   1998 66
+## 23 mcgwima01    SLN   1999 65
+## 24  sosasa01    CHN   1999 63
+## 25 bondsba01    SFN   2001 73
+## 26 gonzalu01    ARI   2001 57
+## 27 rodrial01    TEX   2001 52
+## 28  sosasa01    CHN   2001 64
+## 29 rodrial01    TEX   2002 57
+## 30 thomeji01    CLE   2002 52
+## 31 jonesan01    ATL   2005 51
+## 32 howarry01    PHI   2006 58
+## 33 ortizda01    BOS   2006 54
+## 34 rodrial01    NYA   2007 54
+## 35 bautijo02    TOR   2010 54
+## 36 davisch02    BAL   2013 53</code></pre>
+</div>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="DataVis" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1></h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p>df&lt;-Teams%&gt;% filter(yearID==1980)%&gt;% select(name,HR)%&gt;% arrange(HR)</p>
+<p>str(df<span class="math inline">\(name) class(df\)</span>name) factor(df$name)</p>
+<p>df<span class="math inline">\(name&lt;-factor(df\)</span>name,levels = df$name)</p>
+<div id="visualize-the-data" class="section level2">
+<h2>Visualize the data</h2>
+<p>ggplot()+ geom_bar(data = df,aes(x=name,y=HR,tooltip=HR),stat = “identity”, color = “blue”, fill=“white”)+ coord_flip()+ ggtitle(“1980 Team Homeruns”)+ xlab(“Homeruns”)+ ylab(“Team”)</p>
+</div>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="ggplot" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>GGplot2</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p>In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.</p>
+<p>First let’s load some packages:</p>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<p>Using dplyr, we want to get all the players with 400 or more HR in their baseball careers and the total amount of SO.</p>
+<pre class="r"><code>df&lt;-Batting%&gt;%
+  group_by(playerID)%&gt;%
+  summarize(career_HR=sum(HR),career_SO=sum(SO))%&gt;%
+  filter(career_HR&gt;=400)</code></pre>
+<p>We need to put together the names and last names of the baseball players.</p>
+<pre class="r"><code>HR_VS_SO&lt;-inner_join(df,Master,by=c(&quot;playerID&quot;))%&gt;%
+  select(nameFirst,nameLast,career_HR,career_SO)
+
+HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
+<p>To make a scatter plot with ggplo2, we use the following code:</p>
+<pre class="r"><code>g&lt;-ggplot()+
+  geom_point(data=HR_VS_SO,aes(x=career_SO,y=career_HR, tooltip=nameLast, data_id=nameFirst))+
+  ggtitle(&quot;Career Homeruns vs. Strikeouts for Great Mitters&quot;)+
+  xlab(&quot;Career Strikeouts&quot;)+
+  ylab(&quot;Career Homeruns&quot;)</code></pre>
+<pre><code>## Warning: Ignoring unknown aesthetics: tooltip, data_id</code></pre>
+
   </div>
 </div>
 

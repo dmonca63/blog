@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Data Science Blog</title>
-    <link>https://dmoncada.netlify.com/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>The Lahman Base</title>
-      <link>https://dmoncada.netlify.com/post/2015-07-23-r-rmarkdown/</link>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dmoncada.netlify.com/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
       <description>&lt;p&gt;Let’s use the Lahman database. First let’s download some packages:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(Lahman)
 library(dplyr)&lt;/code&gt;&lt;/pre&gt;
@@ -76,10 +76,10 @@ library(dplyr)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title></title>
-      <link>https://dmoncada.netlify.com/post/datavis/</link>
+      <link>/post/datavis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dmoncada.netlify.com/post/datavis/</guid>
+      <guid>/post/datavis/</guid>
       <description>&lt;p&gt;df&amp;lt;-Teams%&amp;gt;% filter(yearID==1980)%&amp;gt;% select(name,HR)%&amp;gt;% arrange(HR)&lt;/p&gt;
 &lt;p&gt;str(df&lt;span class=&#34;math inline&#34;&gt;\(name) class(df\)&lt;/span&gt;name) factor(df$name)&lt;/p&gt;
 &lt;p&gt;df&lt;span class=&#34;math inline&#34;&gt;\(name&amp;lt;-factor(df\)&lt;/span&gt;name,levels = df$name)&lt;/p&gt;
@@ -92,10 +92,10 @@ library(dplyr)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>GGplot2</title>
-      <link>https://dmoncada.netlify.com/post/ggplot/</link>
+      <link>/post/ggplot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dmoncada.netlify.com/post/ggplot/</guid>
+      <guid>/post/ggplot/</guid>
       <description>&lt;p&gt;In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.&lt;/p&gt;
 &lt;p&gt;First let’s load some packages:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(Lahman)
