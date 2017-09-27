@@ -1,3 +1,5 @@
+##Baseball 1980 Team Homeruns
+
 df<-Teams%>%
   filter(yearID==1980)%>%
   select(name,HR)%>%
@@ -12,9 +14,10 @@ df$name<-factor(df$name,levels = df$name)
 ## Visualize the data
 
 ggplot()+
-  geom_bar(data = df,aes(x=name,y=HR,tooltip=HR),stat = "identity", color = "blue", fill="white")+
+  geom_bar(data = df,aes(x=name,y=HR),stat = "identity", color = "blue", fill="white")+
   coord_flip()+
   ggtitle("1980 Team Homeruns ")+
   xlab("Homeruns")+
   ylab("Team")
+
 
