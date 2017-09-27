@@ -1,0 +1,10 @@
+
+
+
+<p>df&lt;-Teams%&gt;% filter(yearID==1980)%&gt;% select(name,HR)%&gt;% arrange(HR)</p>
+<p>str(df<span class="math inline">\(name) class(df\)</span>name) factor(df$name)</p>
+<p>df<span class="math inline">\(name&lt;-factor(df\)</span>name,levels = df$name)</p>
+<div id="visualize-the-data" class="section level2">
+<h2>Visualize the data</h2>
+<p>ggplot()+ geom_bar(data = df,aes(x=name,y=HR,tooltip=HR),stat = “identity”, color = “blue”, fill=“white”)+ coord_flip()+ ggtitle(“1980 Team Homeruns”)+ xlab(“Homeruns”)+ ylab(“Team”)</p>
+</div>

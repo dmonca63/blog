@@ -28,13 +28,13 @@
 
   
 
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="Data Science Blog">
-  <link rel="feed" href="/post/index.xml" type="application/rss+xml" title="Data Science Blog">
+  <link rel="alternate" href="https://dmoncada.netlify.com/post/index.xml" type="application/rss+xml" title="Data Science Blog">
+  <link rel="feed" href="https://dmoncada.netlify.com/post/index.xml" type="application/rss+xml" title="Data Science Blog">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="/post/">
+  <link rel="canonical" href="https://dmoncada.netlify.com/post/">
 
   
 
@@ -110,6 +110,11 @@
 
 
 
+<div class="article-header">
+  <img src="/img/Mercyhurst.jpg" class="article-banner" itemprop="image">
+  <span class="article-header-caption">Picture credits: Mercyhurst University&rsquo;s Instagram Page</span>
+</div>
+
 
 
 <div class="universal-wrapper">
@@ -122,7 +127,7 @@
   
   <div>
     
-    <h2><a href="/post/2015-07-23-r-rmarkdown/">The Lahman Base</a></h2>
+    <h2><a href="https://dmoncada.netlify.com/post/2015-07-23-r-rmarkdown/">The Lahman Base</a></h2>
     
 
 <div class="article-metadata">
@@ -223,12 +228,50 @@ library(dplyr)</code></pre>
   
   <div>
     
-    <h2><a href="/post/ggplot/">GGplot2</a></h2>
+    <h2><a href="https://dmoncada.netlify.com/post/datavis/"></a></h2>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
+    
+    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Jan 1, 0001
+    </time>
+  </span>
+
+  
+
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      <p>df&lt;-Teams%&gt;% filter(yearID==1980)%&gt;% select(name,HR)%&gt;% arrange(HR)</p>
+<p>str(df<span class="math inline">\(name) class(df\)</span>name) factor(df$name)</p>
+<p>df<span class="math inline">\(name&lt;-factor(df\)</span>name,levels = df$name)</p>
+<div id="visualize-the-data" class="section level2">
+<h2>Visualize the data</h2>
+<p>ggplot()+ geom_bar(data = df,aes(x=name,y=HR,tooltip=HR),stat = “identity”, color = “blue”, fill=“white”)+ coord_flip()+ ggtitle(“1980 Team Homeruns”)+ xlab(“Homeruns”)+ ylab(“Team”)</p>
+</div>
+
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
+    <h2><a href="https://dmoncada.netlify.com/post/ggplot/">GGplot2</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+        Last updated on
     
     <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
       Jan 1, 0001

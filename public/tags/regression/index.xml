@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Regression on Data Science Blog</title>
-    <link>/tags/regression/</link>
+    <link>https://dmoncada.netlify.com/tags/regression/</link>
     <description>Recent content in Regression on Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>The Lahman Base</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://dmoncada.netlify.com/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://dmoncada.netlify.com/post/2015-07-23-r-rmarkdown/</guid>
       <description>&lt;p&gt;Let’s use the Lahman database. First let’s download some packages:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(Lahman)
 library(dplyr)&lt;/code&gt;&lt;/pre&gt;

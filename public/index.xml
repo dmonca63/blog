@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Science Blog on Data Science Blog</title>
-    <link>/</link>
+    <link>https://dmoncada.netlify.com/</link>
     <description>Recent content in Data Science Blog on Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dayana Moncada Morales</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>The Lahman Base</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://dmoncada.netlify.com/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://dmoncada.netlify.com/post/2015-07-23-r-rmarkdown/</guid>
       <description>&lt;p&gt;Let’s use the Lahman database. First let’s download some packages:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(Lahman)
 library(dplyr)&lt;/code&gt;&lt;/pre&gt;
@@ -71,6 +71,61 @@ library(dplyr)&lt;/code&gt;&lt;/pre&gt;
 ## 35 bautijo02    TOR   2010 54
 ## 36 davisch02    BAL   2013 53&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://dmoncada.netlify.com/post/datavis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmoncada.netlify.com/post/datavis/</guid>
+      <description>&lt;p&gt;df&amp;lt;-Teams%&amp;gt;% filter(yearID==1980)%&amp;gt;% select(name,HR)%&amp;gt;% arrange(HR)&lt;/p&gt;
+&lt;p&gt;str(df&lt;span class=&#34;math inline&#34;&gt;\(name) class(df\)&lt;/span&gt;name) factor(df$name)&lt;/p&gt;
+&lt;p&gt;df&lt;span class=&#34;math inline&#34;&gt;\(name&amp;lt;-factor(df\)&lt;/span&gt;name,levels = df$name)&lt;/p&gt;
+&lt;div id=&#34;visualize-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Visualize the data&lt;/h2&gt;
+&lt;p&gt;ggplot()+ geom_bar(data = df,aes(x=name,y=HR,tooltip=HR),stat = “identity”, color = “blue”, fill=“white”)+ coord_flip()+ ggtitle(“1980 Team Homeruns”)+ xlab(“Homeruns”)+ ylab(“Team”)&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GGplot2</title>
+      <link>https://dmoncada.netlify.com/post/ggplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmoncada.netlify.com/post/ggplot/</guid>
+      <description>&lt;p&gt;In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.&lt;/p&gt;
+&lt;p&gt;First let’s load some packages:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(Lahman)
+library(dplyr)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Attaching package: &amp;#39;dplyr&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:stats&amp;#39;:
+## 
+##     filter, lag&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     intersect, setdiff, setequal, union&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using dplyr, we want to get all the players with 400 or more HR in their baseball careers and the total amount of SO.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;df&amp;lt;-Batting%&amp;gt;%
+  group_by(playerID)%&amp;gt;%
+  summarize(career_HR=sum(HR),career_SO=sum(SO))%&amp;gt;%
+  filter(career_HR&amp;gt;=400)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We need to put together the names and last names of the baseball players.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;HR_VS_SO&amp;lt;-inner_join(df,Master,by=c(&amp;quot;playerID&amp;quot;))%&amp;gt;%
+  select(nameFirst,nameLast,career_HR,career_SO)
+
+HR_VS_SO$name&amp;lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To make a scatter plot with ggplo2, we use the following code:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;g&amp;lt;-ggplot()+
+  geom_point(data=HR_VS_SO,aes(x=career_SO,y=career_HR, tooltip=nameLast, data_id=nameFirst))+
+  ggtitle(&amp;quot;Career Homeruns vs. Strikeouts for Great Mitters&amp;quot;)+
+  xlab(&amp;quot;Career Strikeouts&amp;quot;)+
+  ylab(&amp;quot;Career Homeruns&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Ignoring unknown aesthetics: tooltip, data_id&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
