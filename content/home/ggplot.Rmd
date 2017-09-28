@@ -1,8 +1,7 @@
----
+
 title: "GGplot2"
 author: "Dayana Moncada"
 output: html_document
----
 
 In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.
 
@@ -36,11 +35,12 @@ To make a scatter plot with ggplo2, we use the following code:
 
 ```{r}
 g<-ggplot()+
-  geom_point(data=HR_VS_SO,aes(x=career_SO,y=career_HR, tooltip=nameLast, data_id=nameFirst))+
+  geom_point(data=HR_VS_SO,aes(x=career_SO,y=career_HR))+
   ggtitle("Career Homeruns vs. Strikeouts for Great Mitters")+
   xlab("Career Strikeouts")+
   ylab("Career Homeruns")
 ```
+
 
 
 
