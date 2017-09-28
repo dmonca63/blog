@@ -33,7 +33,7 @@ HR_VS_SO$name<-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)
 
 To make a scatter plot with ggplo2, we use the following code:
 
-```{r}
+```{r pressure, echo=FALSE}
 g<-ggplot()+
   geom_point(data=HR_VS_SO,aes(x=career_SO,y=career_HR))+
   ggtitle("Career Homeruns vs. Strikeouts for Great Mitters")+
