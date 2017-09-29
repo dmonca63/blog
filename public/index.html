@@ -415,60 +415,6 @@ HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
     </div>
   </section>
 
-  
-  
-  <section id="index" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  <div class="col-xs-12 col-md-4 section-heading">
-    <h1>Some Babe Ruth Statistics</h1>
-    
-  </div>
-  <div class="col-xs-12 col-md-8">
-    <div id="inputs" class="section level2 sidebar">
-<h2>Inputs</h2>
-<p>Babe Ruth was a power hitter for the New York Yankees in the 20’s and 30’s. He held the record for most homeruns hit in a season until the 60’s. He also held the record for the most career homeruns until the 70’s.</p>
-</div>
-<div id="row" class="section level2" data-height="350">
-<h2>Row</h2>
-<div id="strikeouts-vs.-homeruns" class="section level3">
-<h3>Strikeouts Vs. Homeruns</h3>
-<pre class="r"><code>ggplot()+
-  geom_point(data=result,aes(x=SO,y=HR))+
-  xlab(&quot;Strikeouts&quot;)+
-  ylab(&quot;Homeruns&quot;)</code></pre>
-<p><img src="/home/index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-</div>
-<div id="homerun-distribution" class="section level3">
-<h3>Homerun Distribution</h3>
-<pre class="r"><code>ggplot()+
-  geom_histogram(data=result,aes(x=HR),bins=5,color=&quot;blue&quot;,fill=&quot;white&quot;)+
-  xlab(&quot;Homeruns&quot;)</code></pre>
-<p><img src="/home/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-</div>
-</div>
-<div id="row-1" class="section level2" data-height="650">
-<h2>Row</h2>
-<div id="homerun-totals-through-the-years" class="section level3">
-<h3>Homerun Totals Through the Years</h3>
-<pre class="r"><code>ggplot()+
-  geom_point(data=result,aes(x=yearID,y=HR))+
-  geom_line(data=result,aes(x=yearID,y=HR))+
-  xlab(&quot;year&quot;)+
-  ylab(&quot;Homeruns&quot;)</code></pre>
-<p><img src="/home/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-</div>
-</div>
-
-  </div>
-</div>
-
-    </div>
-  </section>
-
 
 
 <footer class="site-footer">
