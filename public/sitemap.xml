@@ -5,7 +5,7 @@
     
     <url>
     
-      <loc>/tags/academic/</loc>
+      <loc>https://dmoncada.netlify.com/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -14,7 +14,7 @@
     
     <url>
     
-      <loc>/categories/</loc>
+      <loc>https://dmoncada.netlify.com/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -23,7 +23,7 @@
     
     <url>
     
-      <loc>/</loc>
+      <loc>https://dmoncada.netlify.com/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -33,7 +33,15 @@
     
     <url>
     
-      <loc>/tags/plot/</loc>
+      <loc>https://dmoncada.netlify.com/post/link-babe-ruth-s-statistics/</loc>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://dmoncada.netlify.com/tags/plot/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -43,7 +51,7 @@
     
     <url>
     
-      <loc>/publication_types/</loc>
+      <loc>https://dmoncada.netlify.com/post/</loc>
       <priority>0</priority>
     </url>
     
@@ -52,7 +60,16 @@
     
     <url>
     
-      <loc>/tags/r-markdown/</loc>
+      <loc>https://dmoncada.netlify.com/publication_types/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://dmoncada.netlify.com/tags/r-markdown/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -62,7 +79,7 @@
     
     <url>
     
-      <loc>/tags/regression/</loc>
+      <loc>https://dmoncada.netlify.com/tags/regression/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -72,7 +89,7 @@
     
     <url>
     
-      <loc>/tags/</loc>
+      <loc>https://dmoncada.netlify.com/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
