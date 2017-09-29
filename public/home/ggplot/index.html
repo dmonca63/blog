@@ -1,8 +1,10 @@
 <p>title: “GGplot2” author: “Dayana Moncada” output: html_document</p>
 <p>In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.</p>
 <p>First let’s load some packages:</p>
-<pre class="r"><code>library(Lahman)
-library(dplyr)</code></pre>
+<pre class="r"><code>library(Lahman)</code></pre>
+<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.1</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.1</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -12,11 +14,13 @@ library(dplyr)</code></pre>
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.1</code></pre>
 <p>Using dplyr, we want to get all the players with 400 or more HR in their baseball careers and the total amount of SO.</p>
 <pre class="r"><code>df&lt;-Batting%&gt;%
   group_by(playerID)%&gt;%
   summarize(career_HR=sum(HR),career_SO=sum(SO))%&gt;%
   filter(career_HR&gt;=400)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.1</code></pre>
 <p>We need to put together the names and last names of the baseball players.</p>
 <pre class="r"><code>HR_VS_SO&lt;-inner_join(df,Master,by=c(&quot;playerID&quot;))%&gt;%
   select(nameFirst,nameLast,career_HR,career_SO)

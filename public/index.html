@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.28" />
+  <meta name="generator" content="Hugo 0.29" />
   <meta name="author" content="Dayana Moncada">
   <meta name="description" content="Data Science Graduate Student">
 
@@ -255,8 +255,10 @@
 <h2>##The Lahman Base</h2>
 <p>title: “The Lahman Base” author: “Dayana Moncada” date: 2017-09-25 tags: [“R Markdown”, “plot”, “regression”] —</p>
 <p>Let’s use the Lahman database. First let’s download some packages:</p>
-<pre class="r"><code>library(Lahman)
-library(dplyr)</code></pre>
+<pre class="r"><code>library(Lahman)</code></pre>
+<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.1</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.1</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -272,6 +274,7 @@ library(dplyr)</code></pre>
 <pre class="r"><code>Batting%&gt;%
   select(playerID,teamID,yearID,HR)%&gt;%
   filter(HR&gt;50)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.1</code></pre>
 <pre><code>##     playerID teamID yearID HR
 ## 1   ruthba01    NYA   1920 54
 ## 2   ruthba01    NYA   1921 59
@@ -363,8 +366,10 @@ library(dplyr)</code></pre>
     <p>title: “GGplot2” author: “Dayana Moncada” output: html_document</p>
 <p>In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.</p>
 <p>First let’s load some packages:</p>
-<pre class="r"><code>library(Lahman)
-library(dplyr)</code></pre>
+<pre class="r"><code>library(Lahman)</code></pre>
+<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.1</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.1</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -374,17 +379,73 @@ library(dplyr)</code></pre>
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(ggplot2)</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.1</code></pre>
 <p>Using dplyr, we want to get all the players with 400 or more HR in their baseball careers and the total amount of SO.</p>
 <pre class="r"><code>df&lt;-Batting%&gt;%
   group_by(playerID)%&gt;%
   summarize(career_HR=sum(HR),career_SO=sum(SO))%&gt;%
   filter(career_HR&gt;=400)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.1</code></pre>
 <p>We need to put together the names and last names of the baseball players.</p>
 <pre class="r"><code>HR_VS_SO&lt;-inner_join(df,Master,by=c(&quot;playerID&quot;))%&gt;%
   select(nameFirst,nameLast,career_HR,career_SO)
 
 HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
 <p>To make a scatter plot with ggplo2, we use the following code:</p>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="index" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Some Babe Ruth Statistics</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <div id="inputs" class="section level2 sidebar">
+<h2>Inputs</h2>
+<p>Babe Ruth was a power hitter for the New York Yankees in the 20’s and 30’s. He held the record for most homeruns hit in a season until the 60’s. He also held the record for the most career homeruns until the 70’s.</p>
+</div>
+<div id="row" class="section level2" data-height="350">
+<h2>Row</h2>
+<div id="strikeouts-vs.-homeruns" class="section level3">
+<h3>Strikeouts Vs. Homeruns</h3>
+<pre class="r"><code>ggplot()+
+  geom_point(data=result,aes(x=SO,y=HR))+
+  xlab(&quot;Strikeouts&quot;)+
+  ylab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/home/index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="homerun-distribution" class="section level3">
+<h3>Homerun Distribution</h3>
+<pre class="r"><code>ggplot()+
+  geom_histogram(data=result,aes(x=HR),bins=5,color=&quot;blue&quot;,fill=&quot;white&quot;)+
+  xlab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/home/index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+</div>
+<div id="row-1" class="section level2" data-height="650">
+<h2>Row</h2>
+<div id="homerun-totals-through-the-years" class="section level3">
+<h3>Homerun Totals Through the Years</h3>
+<pre class="r"><code>ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  xlab(&quot;year&quot;)+
+  ylab(&quot;Homeruns&quot;)</code></pre>
+<p><img src="/home/index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+</div>
 
   </div>
 </div>
