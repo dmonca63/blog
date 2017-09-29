@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R Markdown on Data Science Blog</title>
-    <link>https://dmoncada.netlify.com/tags/r-markdown/</link>
+    <link>/tags/r-markdown/</link>
     <description>Recent content in R Markdown on Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>

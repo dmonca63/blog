@@ -5,7 +5,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/tags/academic/</loc>
+      <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -14,7 +14,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/categories/</loc>
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -23,7 +23,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/</loc>
+      <loc>/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -33,7 +33,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/post/link-babe-ruth-s-statistics/</loc>
+      <loc>/post/link-babe-ruth-s-statistics/</loc>
     </url>
     
   
@@ -41,7 +41,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/tags/plot/</loc>
+      <loc>/tags/plot/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -51,7 +51,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/post/</loc>
+      <loc>/post/</loc>
       <priority>0</priority>
     </url>
     
@@ -60,7 +60,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/publication_types/</loc>
+      <loc>/publication_types/</loc>
       <priority>0</priority>
     </url>
     
@@ -69,7 +69,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/tags/r-markdown/</loc>
+      <loc>/tags/r-markdown/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -79,7 +79,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/tags/regression/</loc>
+      <loc>/tags/regression/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -89,7 +89,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/tags/</loc>
+      <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
