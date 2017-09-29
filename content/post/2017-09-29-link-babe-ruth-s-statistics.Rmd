@@ -1,9 +1,0 @@
----
-title: Link - Babe Ruth's Statistics
-author: Dayana Moncada
-slug: link-babe-ruth-s-statistics
-categories: []
-tags: []
----
-
-https://dmonca63.github.io/baberuth/

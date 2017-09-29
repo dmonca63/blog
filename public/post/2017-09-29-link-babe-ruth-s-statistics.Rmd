@@ -7,5 +7,4 @@ tags: []
 ---
 
 
-
-<p><a href="https://dmonca63.github.io/baberuth/" class="uri">https://dmonca63.github.io/baberuth/</a></p>
+https://dmonca63.github.io/baberuth/
