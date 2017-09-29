@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Science Blog on Data Science Blog</title>
-    <link>/</link>
+    <link>https://dmoncada.netlify.com/</link>
     <description>Recent content in Data Science Blog on Data Science Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Link - Babe Ruth&#39;s Statistics</title>
-      <link>/post/link-babe-ruth-s-statistics/</link>
+      <link>https://dmoncada.netlify.com/post/link-babe-ruth-s-statistics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/post/link-babe-ruth-s-statistics/</guid>
+      <guid>https://dmoncada.netlify.com/post/link-babe-ruth-s-statistics/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://dmonca63.github.io/baberuth/&#34; class=&#34;uri&#34;&gt;https://dmonca63.github.io/baberuth/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>

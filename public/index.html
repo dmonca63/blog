@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.29" />
+  <meta name="generator" content="Hugo 0.28" />
   <meta name="author" content="Dayana Moncada">
   <meta name="description" content="Data Science Graduate Student">
 
@@ -33,13 +33,13 @@
 
   
 
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Data Science Blog">
-  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Data Science Blog">
+  <link rel="alternate" href="https://dmoncada.netlify.com/index.xml" type="application/rss+xml" title="Data Science Blog">
+  <link rel="feed" href="https://dmoncada.netlify.com/index.xml" type="application/rss+xml" title="Data Science Blog">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="https://dmoncada.netlify.com/">
 
   
 
@@ -132,8 +132,8 @@
     <div id="profile">
 
       
-      <div class="portrait" style="background-image: url('/img/Professionalpic.jpg');"></div>
-      <meta itemprop="image" content="/img/Professionalpic.jpg">
+      <div class="portrait" style="background-image: url('https://dmoncada.netlify.com/img/Professionalpic.jpg');"></div>
+      <meta itemprop="image" content="https://dmoncada.netlify.com/img/Professionalpic.jpg">
       
 
       <div class="portrait-title">
@@ -148,7 +148,7 @@
         
       </div>
 
-      <link itemprop="url" href="/">
+      <link itemprop="url" href="https://dmoncada.netlify.com/">
 
       <ul class="social-icon" aria-hidden="true">
         
@@ -255,10 +255,9 @@
 <h2>##The Lahman Base</h2>
 <p>title: “The Lahman Base” author: “Dayana Moncada” date: 2017-09-25 tags: [“R Markdown”, “plot”, “regression”] —</p>
 <p>Let’s use the Lahman database. First let’s download some packages:</p>
-<pre class="r"><code>library(Lahman)</code></pre>
-<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.1</code></pre>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.1</code></pre>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.2</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -274,7 +273,6 @@
 <pre class="r"><code>Batting%&gt;%
   select(playerID,teamID,yearID,HR)%&gt;%
   filter(HR&gt;50)</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.1</code></pre>
 <pre><code>##     playerID teamID yearID HR
 ## 1   ruthba01    NYA   1920 54
 ## 2   ruthba01    NYA   1921 59
@@ -366,10 +364,9 @@
     <p>title: “GGplot2” author: “Dayana Moncada” output: html_document</p>
 <p>In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.</p>
 <p>First let’s load some packages:</p>
-<pre class="r"><code>library(Lahman)</code></pre>
-<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.1</code></pre>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.1</code></pre>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.2</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -379,13 +376,11 @@
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(ggplot2)</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.4.1</code></pre>
 <p>Using dplyr, we want to get all the players with 400 or more HR in their baseball careers and the total amount of SO.</p>
 <pre class="r"><code>df&lt;-Batting%&gt;%
   group_by(playerID)%&gt;%
   summarize(career_HR=sum(HR),career_SO=sum(SO))%&gt;%
   filter(career_HR&gt;=400)</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.1</code></pre>
 <p>We need to put together the names and last names of the baseball players.</p>
 <pre class="r"><code>HR_VS_SO&lt;-inner_join(df,Master,by=c(&quot;playerID&quot;))%&gt;%
   select(nameFirst,nameLast,career_HR,career_SO)

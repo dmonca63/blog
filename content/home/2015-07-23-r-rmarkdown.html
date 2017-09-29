@@ -11,10 +11,9 @@ tags: ["R Markdown", "plot", "regression"]
 <h2>##The Lahman Base</h2>
 <p>title: “The Lahman Base” author: “Dayana Moncada” date: 2017-09-25 tags: [“R Markdown”, “plot”, “regression”] —</p>
 <p>Let’s use the Lahman database. First let’s download some packages:</p>
-<pre class="r"><code>library(Lahman)</code></pre>
-<pre><code>## Warning: package &#39;Lahman&#39; was built under R version 3.4.1</code></pre>
-<pre class="r"><code>library(dplyr)</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.1</code></pre>
+<pre class="r"><code>library(Lahman)
+library(dplyr)</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.4.2</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -30,7 +29,6 @@ tags: ["R Markdown", "plot", "regression"]
 <pre class="r"><code>Batting%&gt;%
   select(playerID,teamID,yearID,HR)%&gt;%
   filter(HR&gt;50)</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.1</code></pre>
 <pre><code>##     playerID teamID yearID HR
 ## 1   ruthba01    NYA   1920 54
 ## 2   ruthba01    NYA   1921 59
