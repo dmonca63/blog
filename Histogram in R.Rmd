@@ -1,5 +1,5 @@
 ---
-title: "Histogram in R"
+title: "Histogram in R using ggplot2"
 author: "Dayana Moncada"
 output: html_document
 ---
