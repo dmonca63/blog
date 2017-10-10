@@ -1,0 +1,35 @@
+---
+title: "ggplot2 - Bar Chart"
+author: "Dayana Moncada"
+date: "10/10/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+dft<-Teams%>%
+  filter(yearID==1980)%>%
+  select(name,HR)%>%
+  arrange(HR)
+```
+
+```{r}
+ggplot()+
+  geom_bar(data = dft, aes(x=name,y=HR),stat = "identity",color="white", fill="purple")+
+  coord_flip() 
+```
+
+dft$name <- factor(dft$name,levels=dft$name)
+
+```{r}
+ggplot()+
+  geom_bar(data = dft, aes(x=name,y=HR),stat = "identity",color="white", fill="purple")+
+  coord_flip() 
+```
+

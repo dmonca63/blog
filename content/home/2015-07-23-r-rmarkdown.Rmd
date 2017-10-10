@@ -1,4 +1,4 @@
-##The Lahman Base
+
 ---
 title: "The Lahman Base"
 author: "Dayana Moncada"
