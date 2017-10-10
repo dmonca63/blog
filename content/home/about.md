@@ -39,3 +39,5 @@ weight = 5
 
 Dayana Moncada Morales is a MS in Data Science candidate at Mercyhurst University. Her research interests include political data analysis, international relations and diplomacy, programming in R Studio and Python. She is passionate about understanding Latin American political systems, culture and history. 
 
+LinkedIn: https://www.linkedin.com/in/dayanamoncada/ 
+
