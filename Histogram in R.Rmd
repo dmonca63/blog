@@ -1,0 +1,26 @@
+---
+title: "Histogram in R"
+author: "Dayana Moncada"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+```
+
+
+```{r}
+DFMaster <- Master%>%
+  filter(!is.na(weight))%>% 
+  select(weight)
+```
+
+```{r}
+ggplot()+
+  geom_histogram(data=DFMaster, aes(x=weight), bins = 30, color="white", fill="pink")+
+  ggtitle("Baseball Player Weights")
+```
+

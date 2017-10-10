@@ -20,7 +20,7 @@ dft<-Teams%>%
 
 ```{r}
 ggplot()+
-  geom_bar(data = dft, aes(x=name,y=HR),stat = "identity",color="white", fill="purple")+
+  geom_bar(data = dft, aes(x=name,y=HR),stat = "identity",color="white", fill="pink")+
   coord_flip() 
 ```
 
@@ -28,7 +28,7 @@ dft$name <- factor(dft$name,levels=dft$name)
 
 ```{r}
 ggplot()+
-  geom_bar(data = dft, aes(x=name,y=HR),stat = "identity",color="white", fill="purple")+
+  geom_bar(data = dft, aes(x=name,y=HR),stat = "identity",color="white", fill="pink")+
   coord_flip() 
 ```
 

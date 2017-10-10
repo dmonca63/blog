@@ -393,12 +393,12 @@ HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
   select(name,HR)%&gt;%
   arrange(HR)</code></pre>
 <pre class="r"><code>ggplot()+
-  geom_bar(data = dft, aes(x=name,y=HR),stat = &quot;identity&quot;,color=&quot;white&quot;, fill=&quot;purple&quot;)+
+  geom_bar(data = dft, aes(x=name,y=HR),stat = &quot;identity&quot;,color=&quot;white&quot;, fill=&quot;pink&quot;)+
   coord_flip() </code></pre>
 <p><img src="/home/ggplot2-Bar-Chart_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>dft<span class="math inline">\(name &lt;- factor(dft\)</span>name,levels=dft$name)</p>
 <pre class="r"><code>ggplot()+
-  geom_bar(data = dft, aes(x=name,y=HR),stat = &quot;identity&quot;,color=&quot;white&quot;, fill=&quot;purple&quot;)+
+  geom_bar(data = dft, aes(x=name,y=HR),stat = &quot;identity&quot;,color=&quot;white&quot;, fill=&quot;pink&quot;)+
   coord_flip() </code></pre>
 <p><img src="/home/ggplot2-Bar-Chart_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 
