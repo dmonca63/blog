@@ -23,7 +23,11 @@ g<-ggplot()+
   geom_point(data=df,aes(x=yearID, y=HR))
 ```
 
-![Rplot](/Users/dayanamoncada/Desktop/blog/static/Rplot.png)
+<img src= "/Users/dayanamoncada/Desktop/blog/static/img/Rplot.png">
+
+
+
+
 
 
 
