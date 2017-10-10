@@ -1,5 +1,5 @@
 ---
-title: Link - Babe Ruth's Statistics
+title: Link - Using Flexdashboard - Babe Ruth's Statistics
 author: Dayana Moncada
 slug: link-babe-ruth-s-statistics
 categories: []
