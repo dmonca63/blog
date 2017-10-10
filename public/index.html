@@ -356,6 +356,33 @@ HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
 
   
   
+  <section id="Histogram-in-R" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Histogram in R using ggplot2</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <pre class="r"><code>DFMaster &lt;- Master%&gt;%
+  filter(!is.na(weight))%&gt;% 
+  select(weight)</code></pre>
+<pre class="r"><code>ggplot()+
+  geom_histogram(data=DFMaster, aes(x=weight), bins = 30, color=&quot;white&quot;, fill=&quot;pink&quot;)+
+  ggtitle(&quot;Baseball Player Weights&quot;)</code></pre>
+<p><img src="/home/Histogram-in-R_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
   <section id="2017-09-29-link-babe-ruth-s-statistics" class="home-section">
     <div class="container">
       

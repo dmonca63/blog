@@ -1,0 +1,15 @@
+---
+title: "Histogram in R using ggplot2"
+author: "Dayana Moncada"
+output: html_document
+---
+
+
+
+<pre class="r"><code>DFMaster &lt;- Master%&gt;%
+  filter(!is.na(weight))%&gt;% 
+  select(weight)</code></pre>
+<pre class="r"><code>ggplot()+
+  geom_histogram(data=DFMaster, aes(x=weight), bins = 30, color=&quot;white&quot;, fill=&quot;pink&quot;)+
+  ggtitle(&quot;Baseball Player Weights&quot;)</code></pre>
+<p><img src="/home/Histogram-in-R_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
