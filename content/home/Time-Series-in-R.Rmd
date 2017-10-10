@@ -1,0 +1,30 @@
+---
+title: "Time Series in R"
+author: "Dayana Moncada"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(Lahman)
+library(dplyr)
+library(ggplot2)
+```
+
+```{r}
+df<-Batting%>%
+  filter(playerID=='ruthba01')%>%
+  select(yearID,HR)
+```
+
+```{r}
+g<-ggplot()+
+  geom_line(data=df,aes(x=yearID, y=HR))+
+  geom_point(data=df,aes(x=yearID, y=HR))
+```
+
+![optional caption text](figures/Rplot.png)
+
+
+
+

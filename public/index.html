@@ -404,6 +404,36 @@ HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
 
   
   
+  <section id="Time-Series-in-R" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Time Series in R</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <pre class="r"><code>df&lt;-Batting%&gt;%
+  filter(playerID==&#39;ruthba01&#39;)%&gt;%
+  select(yearID,HR)</code></pre>
+<pre class="r"><code>g&lt;-ggplot()+
+  geom_line(data=df,aes(x=yearID, y=HR))+
+  geom_point(data=df,aes(x=yearID, y=HR))</code></pre>
+<div class="figure">
+<img src="figures/Rplot.png" alt="optional caption text" />
+<p class="caption">optional caption text</p>
+</div>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
   <section id="ggplot2-Bar-Chart" class="home-section">
     <div class="container">
       
