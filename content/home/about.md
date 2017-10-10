@@ -21,7 +21,7 @@ weight = 5
 [[education.courses]]
   course = "MS in Data Science"
   institution = "Mercyhurst University"
-  year = 2017
+  year = 2019
 
 [[education.courses]]
   course = "BS in Fashion Merchandising"
