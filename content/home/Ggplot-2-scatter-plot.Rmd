@@ -4,7 +4,7 @@ author: "Dayana Moncada"
 output: html_document
 ---
 
-In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.
+In this class we will learn how to create a scatter plot with the Lahman database, using dplyr and using ggplot2.
 
 First let’s load some packages:
 
