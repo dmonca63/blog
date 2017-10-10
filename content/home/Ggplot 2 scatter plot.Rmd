@@ -1,17 +1,22 @@
-
-title: "GGplot2"
+---
+title: "Ggplot2 - Scatter Plot"
 author: "Dayana Moncada"
+date: "10/10/2017"
 output: html_document
+---
 
 In this class we will learn how to create a scatter plot with the Lahman database, using dplyr, and using ggplot2, with ggiraph to make it interactive.
 
 First let’s load some packages:
 
-```{r}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 library(Lahman)
 library(dplyr)
 library(ggplot2)
 ```
+
+## R Markdown
 
 Using dplyr, we want to get all the players with 400 or more HR in their baseball careers and the total amount of SO. 
 
@@ -31,16 +36,16 @@ HR_VS_SO<-inner_join(df,Master,by=c("playerID"))%>%
 HR_VS_SO$name<-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)
 ```
 
+## Including Plots
+
 To make a scatter plot with ggplo2, we use the following code:
 
 ```{r pressure, echo=FALSE}
+plot(pressure)
 g<-ggplot()+
   geom_point(data=HR_VS_SO,aes(x=career_SO,y=career_HR))+
   ggtitle("Career Homeruns vs. Strikeouts for Great Mitters")+
   xlab("Career Strikeouts")+
   ylab("Career Homeruns")
 ```
-
-
-
 
