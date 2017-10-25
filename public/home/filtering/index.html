@@ -1,0 +1,6 @@
+<p>sns&lt;-austen_books()</p>
+<p>sns&lt;-sns%&gt;% filter(book == ‘Sense &amp; Sensibility’)</p>
+<p>sns<span class="math inline">\(book&lt;-as.character(sns\)</span>book) #unnecessary</p>
+<p>str_detect(sns$text,‘^CHAPTER’) #detect chapters lines</p>
+<p>sns&lt;-sns%&gt;% filter(!str_detect(sns$text,‘^CHAPTER’)) #filtering and just taking the lines that are not chapter lines</p>
+<p>sns&lt;-sns[12:12574,] sns&lt;-sns[1:12562,]</p>
