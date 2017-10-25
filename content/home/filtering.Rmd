@@ -1,0 +1,16 @@
+sns<-austen_books()
+
+sns<-sns%>%
+  filter(book == 'Sense & Sensibility')
+
+sns$book<-as.character(sns$book) #unnecessary 
+
+str_detect(sns$text,'^CHAPTER') #detect chapters lines
+
+sns<-sns%>%
+  filter(!str_detect(sns$text,'^CHAPTER'))  #filtering and just taking the lines that are not chapter lines
+
+sns<-sns[12:12574,]
+sns<-sns[1:12562,]
+
+
