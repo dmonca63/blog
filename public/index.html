@@ -268,30 +268,6 @@
 
   
   
-  <section id="wordcloud" class="home-section">
-    <div class="container">
-      
-
-
-<div class="row">
-  <div class="col-xs-12 col-md-4 section-heading">
-    <h1></h1>
-    
-  </div>
-  <div class="col-xs-12 col-md-8">
-    <p>words_df&lt;-sns%&gt;% unnest_tokens(word,text)</p>
-<p>words_df&lt;-words_df%&gt;% filter(!(word %in% stop_words$word))%&gt;%</p>
-<p>word_freq&lt;-words_df%&gt;% group_by(word)%&gt;% summarize(count=n())</p>
-<p>wordcloud(word_freq<span class="math inline">\(word,word_freq\)</span>count,min.freq = 25)</p>
-
-  </div>
-</div>
-
-    </div>
-  </section>
-
-  
-  
   <section id="Ggplot-2-scatter-plot" class="home-section">
     <div class="container">
       
