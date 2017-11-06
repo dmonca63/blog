@@ -262,6 +262,7 @@
   group_by(playerID)%&gt;%
   summarize(career_HR=sum(HR),career_SO=sum(SO))%&gt;%
   filter(career_HR&gt;=400)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.2</code></pre>
 <p>We need to put together the names and last names of the baseball players.</p>
 <pre class="r"><code>HR_VS_SO&lt;-inner_join(df,Master,by=c(&quot;playerID&quot;))%&gt;%
   select(nameFirst,nameLast,career_HR,career_SO)
@@ -296,6 +297,7 @@ HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
     <pre class="r"><code>DFMaster &lt;- Master%&gt;%
   filter(!is.na(weight))%&gt;% 
   select(weight)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.2</code></pre>
 <pre class="r"><code>ggplot()+
   geom_histogram(data=DFMaster, aes(x=weight), bins = 30, color=&quot;white&quot;, fill=&quot;pink&quot;)+
   ggtitle(&quot;Baseball Player Weights&quot;)</code></pre>
@@ -344,10 +346,33 @@ HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
     <pre class="r"><code>df&lt;-Batting%&gt;%
   filter(playerID==&#39;ruthba01&#39;)%&gt;%
   select(yearID,HR)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.2</code></pre>
 <pre class="r"><code>g&lt;-ggplot()+
   geom_line(data=df,aes(x=yearID, y=HR))+
   geom_point(data=df,aes(x=yearID, y=HR))</code></pre>
 <p><img src= "/Users/dayanamoncada/Desktop/blog/static/img/Rplot.png"></p>
+
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  
+  
+  <section id="themasque" class="home-section">
+    <div class="container">
+      
+
+
+<div class="row">
+  <div class="col-xs-12 col-md-4 section-heading">
+    <h1>Wordcloud - PDF output using TeX</h1>
+    
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <p>In this article we construct a wordcloud, using the tidytext R package, for Edgar A. Poe’s The Masque of the Red Death novel. Follow the link to see the PDF file.</p>
+<p><a href="https://github.com/dmonca63/halloweenproject/blob/master/themasque.pdf" class="uri">https://github.com/dmonca63/halloweenproject/blob/master/themasque.pdf</a></p>
 
   </div>
 </div>
@@ -372,6 +397,7 @@ HR_VS_SO$name&lt;-paste(HR_VS_SO$nameFirst,HR_VS_SO$nameLast)</code></pre>
   filter(yearID==1980)%&gt;%
   select(name,HR)%&gt;%
   arrange(HR)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.2</code></pre>
 <pre class="r"><code>ggplot()+
   geom_bar(data = dft, aes(x=name,y=HR),stat = &quot;identity&quot;,color=&quot;white&quot;, fill=&quot;pink&quot;)+
   coord_flip() </code></pre>

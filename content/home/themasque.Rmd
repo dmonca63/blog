@@ -1,7 +1,6 @@
 ---
 title: "Wordcloud - PDF output using TeX"
 author: "Dayana Moncada"
-date: "November 6, 2017"
 output: html_document
 ---
 

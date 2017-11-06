@@ -10,6 +10,7 @@ output: html_document
   filter(yearID==1980)%&gt;%
   select(name,HR)%&gt;%
   arrange(HR)</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.4.2</code></pre>
 <pre class="r"><code>ggplot()+
   geom_bar(data = dft, aes(x=name,y=HR),stat = &quot;identity&quot;,color=&quot;white&quot;, fill=&quot;pink&quot;)+
   coord_flip() </code></pre>
