@@ -1,6 +1,6 @@
 baseurl = "https://dmoncada.netlify.com/"
 title = "Data Science Blog"
-copyright = "&copy; 2017 Dayana Moncada Morales"
+copyright = "&copy; 2017 Dayana Moncada"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -35,7 +35,7 @@ defaultContentLanguageInSubdir = false
 
   # Enable global LaTeX math rendering?
   #   If false, you can enable it locally on a per page basis.
-  math = false
+  math = true
 
   # Highlight.js options
   #   highlight
@@ -127,6 +127,16 @@ defaultContentLanguageInSubdir = false
     icon_pack = "fa"
     link = "https://github.com/dmonca63"
 
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    link = "https://www.linkedin.com/in/dayanamoncada/"
+    
+  [[params.social]]
+    icon = "instagram"
+    icon_pack = "fa"
+    link = "https://www.instagram.com/dayanamoncadam/"
+
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -137,11 +147,6 @@ defaultContentLanguageInSubdir = false
   name = "Home"
   url = "#about"
   weight = 1
-
-[[menu.main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 3
 
 [[menu.main]]
   name = "Contact"
