@@ -5,7 +5,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/tags/academic/</loc>
+      <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -14,7 +14,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/categories/</loc>
+      <loc>/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -23,7 +23,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/</loc>
+      <loc>/</loc>
       <priority>0</priority>
     </url>
     
@@ -32,7 +32,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/publication_types/</loc>
+      <loc>/publication_types/</loc>
       <priority>0</priority>
     </url>
     
@@ -41,7 +41,7 @@
     
     <url>
     
-      <loc>https://dmoncada.netlify.com/tags/</loc>
+      <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
