@@ -1,7 +1,6 @@
 ---
 title: "Text Mining"
 author: "Dayana Moncada"
-date: "11/13/2017"
 output: html_document
 ---
 
