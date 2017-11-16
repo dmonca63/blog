@@ -65,6 +65,9 @@ wordcloud(dracula_words$word,dracula_words$freq,min.freq=5)
 wordcloud2(dracula_words)
 ```
 
+![Wordcloud2-Interactive](/Users/dayanamoncada/Desktop/blog/static/home/Dracula-sentiment_files/figure-html)
+
+
 ```{r,warning=FALSE,message=FALSE}
 dracula_matrix<-acast(dracula_words,word~sentiment,value.var = 'freq',fill=0)
 ```
@@ -126,7 +129,7 @@ Graph:
 
 ```{r,warning=FALSE,message=FALSE}
 ggplot()+
-  geom_bar(data = dracula_neg,aes(x=word,y=count),stat = 'identity')+
+  geom_line(data = dracula_neg,aes(x=word,y=count),stat = 'identity')+
   coord_flip()+
   facet_wrap(~sentiment)
 
@@ -142,7 +145,7 @@ dracula_comp<-rbind(dracula_pos,dracula_neg)
 Graph:
 ```{r,warning=FALSE,message=FALSE}
 ggplot()+
-  geom_bar(data = dracula_comp,aes(x=word,y=count, fill=sentiment,color=sentiment),stat = 'identity')+
+  geom_line(data = dracula_comp,aes(x=word,y=count, fill=sentiment,color=sentiment),stat = 'identity')+
   coord_flip()+
   facet_wrap(~sentiment,scales='free_y')+
   scale_fill_manual(values=c('black','#ea6205'))+
